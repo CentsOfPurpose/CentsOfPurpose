@@ -8,8 +8,8 @@ const bodyParser = require('body-parser');
 const PORT = Config.PORT;
 
 //Middlewares
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 //Enable cross domain
 app.use(function(req, res, next) {

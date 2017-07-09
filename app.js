@@ -1,9 +1,9 @@
 console.log("Server Listening on Port 4567");
-
+require('dotenv').config(); //loading environment variables
 const bodyParser = require('body-parser');
 
-const keyPublishable = process.env.PUBLISHABLE_KEY;
-const keySecret = process.env.SECRET_KEY;
+const keyPublishable = process.env.STRIPE_PUBLISHABLE_KEY;
+const keySecret = process.env.STRIPE_SECRET_KEY;
 
 const app = require("express")();
 const stripe = require("stripe")(keySecret);
