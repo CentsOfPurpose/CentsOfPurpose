@@ -4,7 +4,7 @@
 
 ### Synopsis
 
-Make a change with your change. Changing lives with your change, while changing your perspective.
+Make a change with your change. Change lives with your change, while changing your perspective.
 
 ### Motivation
 
