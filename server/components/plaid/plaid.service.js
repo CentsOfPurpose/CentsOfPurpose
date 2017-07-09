@@ -20,10 +20,10 @@ class plaidService {
 
         console.log("user", user);
         this.client.getTransactions(user.access_token, thirtyDaysAgo, today, (err, res) => {
-            if (err) {
-                return err;
+            if (err || !res) {
+                callback(err);
             }
-            callback(null, res.transactions);
+            callback(null, res);
         });
     }
 

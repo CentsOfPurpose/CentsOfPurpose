@@ -19,11 +19,23 @@ class plaidController {
     retrieveUserTransactionsAction(req, res) {
         let username = req.body.username;
         let user = userService.get(username);
-        plaidService.retrieveUserTransactions(user, (err, transactions) => {
+        plaidService.retrieveUserTransactions(user, (err, response) => {
             if(err) {
                 res.send(err).status(400);
+            } else
+            if(response) {
+                let transactions = response.transactions.map(transaction => {
+                    return {
+                        name : transaction.name,
+                        amount : transaction.amount,
+                        roundUp : (Math.ceil(transaction.amount) - transaction.amount).toFixed(2)
+                    }
+                })
+
+                res.send(transactions);
+            } else {
+                res.send("results not ready");
             }
-            res.send(transactions);
         });
     }
 
