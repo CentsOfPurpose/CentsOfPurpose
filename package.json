@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "NODE_ENV=dev nodemon server/server",
-    "qa" : "NODE_ENV=qa nodemon server/server",
-    "prod" : "NODE_ENV=prod nodemon server/server",
-    "start" : "node server/server"
+    "dev": "NODE_ENV=dev nodemon server/server",
+    "qa": "NODE_ENV=qa nodemon server/server",
+    "prod": "NODE_ENV=prod nodemon server/server",
+    "start": "node server/server"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "dotenv": "^4.0.0",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2",
+    "stripe": "^4.23.1"
   }
 }
