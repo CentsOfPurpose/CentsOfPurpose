@@ -1,8 +1,8 @@
 module.exports = {
     PORT: 3000,
     STRIPE: {
-        PUBLISHABLE_KEY: process.env.PUBLISHABLE_KEY,
-        SECRET_KEY: process.env.SECRET_KEY
+        PUBLISHABLE_KEY: process.env.STRIPE_PUBLISHABLE_KEY,
+        SECRET_KEY: process.env.STRIPE_SECRET_KEY
     },
     PLAID: {
         CLIENT_ID: process.env.PLAID_CLIENT_ID,
