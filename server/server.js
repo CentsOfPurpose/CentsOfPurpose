@@ -1,10 +1,10 @@
-"use strict";
+require('dotenv').config(); //loading environment variables
+Config = require("./config"); //Import the config and make it globally available
 
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const Config = require("./config"); //Import the config and make it globally available
 const PORT = Config.PORT;
 
 //Middlewares

@@ -2,8 +2,9 @@
  * Import a config based on environment
  */
 module.exports = (function() {
-    console.log(`Loading config ${process.env.NODE_ENV}`);
-    switch(process.env.NODE_ENV) {
+    const env = process.env.NODE_ENV;
+    console.log(`Loading config ${env}`);
+    switch(env) {
         case "dev":
             return require('./dev');
         case "qa":
